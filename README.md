@@ -113,6 +113,7 @@ Calcular de forma recursiva la suma de los dígitos de un número siendo un ejem
 
 Para calcular de forma recursiva la suma de los digitos de un número se pude usar la recursividad de cola. La complejidad computacional del algoritmo es O(n).
 
+
 Ejercicio 5
 
 1)    En la red social Twitter, cada usuario es propietario de una cuenta (Ejercicio5.Ejercicio5.UserAccount) en la que, básicamente, se especifica un alias (que cumple las funciones de identificador único) y un email de contacto. En la cuenta, además, se incluye el conjunto de tweets que el propietario va publicando a lo largo del tiempo.
