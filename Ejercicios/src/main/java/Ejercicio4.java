@@ -21,4 +21,7 @@ public class Ejercicio4 {
     }
 }
 
+
+
+
 //Para calcular de forma recursiva la suma de los digitos de un número se pude usar la recursividad de cola. La complejidad computacional del algoritmo es O(n).
