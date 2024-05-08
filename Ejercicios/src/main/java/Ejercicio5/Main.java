@@ -3,14 +3,12 @@ package Ejercicio5;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 
 public class Main {
     private static JFrame frame;
@@ -36,6 +34,15 @@ public class Main {
                 } else {
                     JOptionPane.showMessageDialog(frame, "Usuario cargado: " + currentUser);
                 }
+            }
+        });
+
+        JButton registerButton = new JButton("Register");
+        registerButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String alias = JOptionPane.showInputDialog(frame, "Enter the new user's alias:");
+                String email = JOptionPane.showInputDialog(frame, "Enter the new user's email:");
+                registerUser(alias, email);
             }
         });
 
@@ -73,8 +80,11 @@ public class Main {
             }
         });
 
+
+
         JPanel panel = new JPanel();
         panel.add(loginButton);
+        panel.add(registerButton);
         panel.add(tweetButton);
         panel.add(sortButton);
         panel.add(showButton);
@@ -106,5 +116,19 @@ public class Main {
             }
         }
         return null;
+    }
+
+    private static void registerUser(String alias, String email) {
+        users.add(new UserAccount(alias, email));
+        writeUserToFile(alias, email);
+    }
+
+    private static void writeUserToFile(String alias, String email) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("users.txt", true))) {
+            writer.write(alias + "," + email);
+            writer.newLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
