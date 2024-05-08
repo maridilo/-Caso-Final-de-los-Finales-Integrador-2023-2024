@@ -76,17 +76,17 @@ Para calcular de forma recursiva la suma de los digitos de un número se pude us
 
 Ejercicio 5
 
-1)    En la red social Twitter, cada usuario es propietario de una cuenta (UserAccount) en la que, básicamente, se especifica un alias (que cumple las funciones de identificador único) y un email de contacto. En la cuenta, además, se incluye el conjunto de tweets que el propietario va publicando a lo largo del tiempo.
+1)    En la red social Twitter, cada usuario es propietario de una cuenta (Ejercicio5.Ejercicio5.UserAccount) en la que, básicamente, se especifica un alias (que cumple las funciones de identificador único) y un email de contacto. En la cuenta, además, se incluye el conjunto de tweets que el propietario va publicando a lo largo del tiempo.
 
-Como la cantidad de mensajes que maneja la red es inmensa, una característica original de Twitter es que cada usuario puede seleccionar la información que le interesa recibir. De esta manera, el propietario de una UserAccount puede convertirse en seguidor (follower) de otros usuarios, mostrando su interés en los tweets que ellos publiquen. Así, cada vez que un usuario publica un tweet, éste es incluido en el timeline de la UserAccount de cada uno de sus followers (es decir, el timeline se corresponde con el conjunto de tweets recibidos). Un usuario tiene también una lista de personas a las que sigue (following).
+Como la cantidad de mensajes que maneja la red es inmensa, una característica original de Twitter es que cada usuario puede seleccionar la información que le interesa recibir. De esta manera, el propietario de una Ejercicio5.Ejercicio5.UserAccount puede convertirse en seguidor (follower) de otros usuarios, mostrando su interés en los tweets que ellos publiquen. Así, cada vez que un usuario publica un tweet, éste es incluido en el timeline de la Ejercicio5.Ejercicio5.UserAccount de cada uno de sus followers (es decir, el timeline se corresponde con el conjunto de tweets recibidos). Un usuario tiene también una lista de personas a las que sigue (following).
 
 En base a estas especificaciones se solicita que:
 
-a)     Programe la clase UserAccount y sus constructores. Incluya todos sus atributos. Al iniciar una cuenta el usuario no sigue a nadie, no tiene ningún tweet y el timeline está vacío. Establezca la visibilidad adecuada. Indica el tipo de datos de todos los atributos y parámetros del constructor y suponga que ya tiene implementadas correctamente las clases Tweet y Email.
+a)     Programe la clase Ejercicio5.Ejercicio5.UserAccount y sus constructores. Incluya todos sus atributos. Al iniciar una cuenta el usuario no sigue a nadie, no tiene ningún tweet y el timeline está vacío. Establezca la visibilidad adecuada. Indica el tipo de datos de todos los atributos y parámetros del constructor y suponga que ya tiene implementadas correctamente las clases Tweet y Email.
 
-Justifique, brevemente, porqué ha seleccionado cada estructura de datos para los atributos. Se debe comprobar que el email contiene el carácter (@) y que el alias solo contiene números y/o letras. Programe una clase Utils que contenga funciones independientes para comprobar si el email es válido y si el alias es válido. En caso contrario, se deberá gestionar de forma adecuada la casuística.
+Justifique, brevemente, porqué ha seleccionado cada estructura de datos para los atributos. Se debe comprobar que el email contiene el carácter (@) y que el alias solo contiene números y/o letras. Programe una clase Ejercicio5.Utils que contenga funciones independientes para comprobar si el email es válido y si el alias es válido. En caso contrario, se deberá gestionar de forma adecuada la casuística.
 
-b)    Implemente, en UserAccount, un método que permita a un usuario seguir a otro. El método no debe devolver nada.
+b)    Implemente, en Ejercicio5.Ejercicio5.UserAccount, un método que permita a un usuario seguir a otro. El método no debe devolver nada.
 
 ·        Al ejecutar “user.follow(user2)”, el usuario user se convertirá en follower de user2.
 
@@ -94,7 +94,7 @@ b)    Implemente, en UserAccount, un método que permita a un usuario seguir a o
 
 ·        Gestione adecuadamente que un usuario no pueda seguir dos veces al mismo usuario. Si esto ocurre, se gestionará adecuadamente.
 
-c)     Implemente, en UserAccount, un método que permita a un usuario publicar un Tweet:
+c)     Implemente, en Ejercicio5.Ejercicio5.UserAccount, un método que permita a un usuario publicar un Tweet:
 
 ·        Después de ejecutar el método “user.tweet(tweet1)”, se deberá actualizar adecuadamente el atributo tweets de user. Además, todos los followers de user habrán recibido el tweet1 en su timeline.
 
@@ -116,7 +116,7 @@ a)   Implemente las clases Tweet, Retweet y DirectMessage escogiendo la jerarqu�
 
 ·       Reutilice todo el código que pueda. Para el atributo time, se recomienda utilizar la clase LocalDate de Java.
 
-·       Suponga que ya tiene implementada correctamente la clase UserAccount.
+·       Suponga que ya tiene implementada correctamente la clase Ejercicio5.Ejercicio5.UserAccount.
 
 b) Implemente los constructores de las clases reutilizando al máximo todo el código disponible.
 
@@ -124,15 +124,15 @@ b) Implemente los constructores de las clases reutilizando al máximo todo el c�
 
 ·       Recuerde que la librería estándar tiene una función que permite calcular la longitud de una cadena de caracteres.
 
-c)  Implemente el método toString en las tres clases, reutilizando al máximo todo el código disponible. Suponga que las clases LocalDate y UserAccount ya tiene este método implementado correctamente.
+c)  Implemente el método toString en las tres clases, reutilizando al máximo todo el código disponible. Suponga que las clases LocalDate y Ejercicio5.Ejercicio5.UserAccount ya tiene este método implementado correctamente.
 
 d)  Responda a las siguiente preguntas:
 
-·       ¿Deberá modificar los atributos timeline y tweets de la clase UserAccount (definida en el ejercicio 1) para que contenga elementos de la clase hija Retweet? Justifique su razonamiento y, si cree que hay que modificarlos, explique también cómo lo haría.
+·       ¿Deberá modificar los atributos timeline y tweets de la clase Ejercicio5.Ejercicio5.UserAccount (definida en el ejercicio 1) para que contenga elementos de la clase hija Retweet? Justifique su razonamiento y, si cree que hay que modificarlos, explique también cómo lo haría.
 
-·       ¿Deberá modificar el método tweet(Tweet tweet1) de la clase UserAccount (definida en el ejercicio 1) para que pueda enviar también objetos de tipo Retweet? Justifique su razonamiento y, si cree que hay que modificarlo, explique también cómo lo haría.
+·       ¿Deberá modificar el método tweet(Tweet tweet1) de la clase Ejercicio5.Ejercicio5.UserAccount (definida en el ejercicio 1) para que pueda enviar también objetos de tipo Retweet? Justifique su razonamiento y, si cree que hay que modificarlo, explique también cómo lo haría.
 
-3)    Suponga que la clase Utils contiene los métodos: leerCadena, leerEntero, leerFloat y leerDouble correctamente implementados. Utilícelos para leer por consola como lo hace en los ejercicios de clase.
+3)    Suponga que la clase Ejercicio5.Utils contiene los métodos: leerCadena, leerEntero, leerFloat y leerDouble correctamente implementados. Utilícelos para leer por consola como lo hace en los ejercicios de clase.
 
 Implemente una clase main que permita al iniciarse Cargue una lista de usuarios de un fichero. Utilice las estructuras de datos que considere más adecuadas y justifique su uso. Puede crear las funciones y métodos que considere convenientes o necesarias en las clases correspondientes previamente solicitadas. Sólo debe especificar qué clases son en caso de que lo haga, no debe redifinir la clase completa. Posteriormente habrá un menú que permita:
 
