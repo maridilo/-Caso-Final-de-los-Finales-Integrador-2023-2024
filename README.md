@@ -59,11 +59,51 @@ A partir de n=8 la función A es más eficiente que la función B.
 
 Ejercicio 3
 Dado el siguiente algoritmo recursivo:
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int a=recursive(1,-2);
+        System.out.println(a);
+        public static int recursive(int a, int b){
+            if (b==0)
+            {
+                return 1;
+            }
+            else if (a==0){
+                return 0;
+            }
+            else{
+                return a * recursive(a,b-1);
+            }
+        }
+    }
+
 Preguntas:
 a)    ¿Qué imprime el código? En caso de que no compile indique el motivo y arregle el programa como considere conveniente. Explique su solución de manera concisa.
+El código dado tiene un error de compilación. El método recursive está definido dentro del método main, lo cual no es permitido en Java. Además, el método recursive debería ser estático, ya que se invoca desde un contexto estático (el método main). Por lo tanto, se debe definir el método recursive fuera del método main y marcarlo como estático.
 
+import java.util.*;
+
+public class Main {
+   public static void main(String[] args) {
+        int a = recursive(1, -2);
+        System.out.println(a);
+    }
+
+   public static int recursive(int a, int b) {
+        if (b == 0) {
+            return 1;
+        } else if (a == 0) {
+            return 0;
+        } else {
+            return a * recursive(a, b - 1);
+        }
+    }
+}
 
 b)    Explica brevemente qué cálculo está haciendo y qué tipo de recursividad está empleando.
+ El código imprime el resultado de la función recursive(1, -2). Este algoritmo implementa una recursividad directa. La función recursive toma dos argumentos a y b, y devuelve el resultado de elevar a a la potencia b. Si b es igual a 0, devuelve 1. Si a es igual a 0, devuelve 0. De lo contrario, llama recursivamente a la función recursive con el mismo a y b - 1, multiplicando a por el resultado de la llamada recursiva. En resumen, está calculando la potencia de un número a elevado a la potencia b.
 
 
 
@@ -72,7 +112,6 @@ Calcular de forma recursiva la suma de los dígitos de un número siendo un ejem
 ¿ Qué tipo de recursividad se está empleando? ¿ Qué complejidad computacional tiene el algoritmo?
 
 Para calcular de forma recursiva la suma de los digitos de un número se pude usar la recursividad de cola. La complejidad computacional del algoritmo es O(n).
-
 
 Ejercicio 5
 
