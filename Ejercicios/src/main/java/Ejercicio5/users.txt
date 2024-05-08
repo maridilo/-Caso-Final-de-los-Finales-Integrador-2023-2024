@@ -1,3 +1,0 @@
-alias1,email1
-alias2,email2
-alias3,email3
