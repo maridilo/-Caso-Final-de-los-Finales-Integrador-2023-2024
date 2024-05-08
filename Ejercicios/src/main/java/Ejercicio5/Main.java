@@ -20,7 +20,7 @@ public class Main {
 
         frame = new JFrame("Twitter");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(800, 600);
+        frame.setSize(400, 200);
         frame.setLocationRelativeTo(null);
 
         JButton loginButton = new JButton("Login");
@@ -80,8 +80,6 @@ public class Main {
             }
         });
 
-
-
         JPanel panel = new JPanel();
         panel.add(loginButton);
         panel.add(registerButton);
@@ -91,8 +89,6 @@ public class Main {
         frame.add(panel);
 
         frame.setVisible(true);
-
-
     }
 
     private static void loadUsersFromFile(String filename) {
